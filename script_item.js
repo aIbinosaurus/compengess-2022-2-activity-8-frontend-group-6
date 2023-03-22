@@ -92,6 +92,7 @@ const addItem = async () => {
     const itemsData = await response.json();
     redrawDOM();
     showItemsInTable(itemsData);
+    location.reload();
   } catch (err) {
     console.error(err);
   }
@@ -118,6 +119,7 @@ const deleteItem = async (item_id) => {
     console.log(result);
     redrawDOM();
     showItemsInTable(result);
+    location.reload();
   } catch (err) {
     console.error(err);
   }
